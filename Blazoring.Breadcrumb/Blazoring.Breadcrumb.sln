@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazoring.Breadcrumb.Demo", "Blazoring.Breadcrumb.Demo\Blazoring.Breadcrumb.Demo.csproj", "{B812552F-66A7-482C-929C-70D24782BB3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazoring.Breadcrumbs", "Blazoring.Breadcrumbs\Blazoring.Breadcrumbs.csproj", "{35AFBEB8-D3F5-4855-8056-FA9F7994D478}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B812552F-66A7-482C-929C-70D24782BB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B812552F-66A7-482C-929C-70D24782BB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B812552F-66A7-482C-929C-70D24782BB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B812552F-66A7-482C-929C-70D24782BB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35AFBEB8-D3F5-4855-8056-FA9F7994D478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35AFBEB8-D3F5-4855-8056-FA9F7994D478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35AFBEB8-D3F5-4855-8056-FA9F7994D478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35AFBEB8-D3F5-4855-8056-FA9F7994D478}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D232C04E-0434-4384-ABE1-E4AE8506920B}
+	EndGlobalSection
+EndGlobal

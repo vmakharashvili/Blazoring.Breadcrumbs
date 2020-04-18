@@ -1,0 +1,53 @@
+﻿@inject BreadcrumbService BreadcrumbService;
+
+<div>
+        <span class="breadcrumb @(BreadCrumbsTree == null?"active":"")">
+            <a href="/">Home</a>
+        </span>
+        @if (BreadCrumbsTree != null)
+        {
+            @foreach (var br in BreadCrumbsTree)
+            {
+                <span class="breadcrumb @(br.Child == null?"active":"")">
+                    <a href="@br.Url">@br.Name</a>
+                </span>
+            }
+        }
+</div>
+
+@code {
+
+    private List<Breadcrumb>? BreadCrumbsTree { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        BreadcrumbService.BreadcrumbInstantiated += RenderBreadcrumb;
+    }
+
+    void RenderBreadcrumb(object sender, Breadcrumb? breadCrumb)
+    {
+        GenerateBreadcrumbTree(breadCrumb, 0);
+    }
+
+    void GenerateBreadcrumbTree(Breadcrumb? breadCrumb, int i)
+    {
+        if (i == 0)
+            BreadCrumbsTree = new List<Breadcrumb>();
+
+        if (breadCrumb != null)
+        {
+            BreadCrumbsTree.Add(breadCrumb);
+            if (breadCrumb.Child != null)
+            {
+                i++;
+                GenerateBreadcrumbTree(breadCrumb.Child, i);
+            }
+        }
+        else
+        {
+            BreadCrumbsTree = null;
+        }
+        StateHasChanged();
+    }
+}
